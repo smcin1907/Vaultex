@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaultex</title>
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.svg" rel="icon">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="shadow-lg d-flex justify-content-center p-2">
+        <span class="fs-1">Validate ATM Order</span>
+    </header> <!-- End of Header -->
+
+    <!-- Main -->
+    <main class="py-3 p-sm-5">
+
+        <!-- Registration Form-->
+        <form id="orderForm" role="form" method="POST" action="/assets/js/main.js" class="bg-light mx-auto rounded shadow-lg p-3">
+
+            <!-- Toggle Casette Count-->
+            <button id="removeCassetteCount" type="button" class="d-block btn-sm btn-danger mx-auto">Toggle Casette Count</button>
+
+            <!-- Cassette Count -->
+            <div id="cassetteCountCont" class="my-3">
+
+                <span class="d-block mb-1">Cassette Count</span>
+
+                <div class="input-group">
+
+                    <label for="cassetteName" class="form-label visually-hidden">Cassettes</label>
+                    <input name="cassetteName" value="cassettes" class="form-control" list="cassetteNameOptions" id="cassetteName">
+                    <datalist id="cassetteNameOptions">
+                        <option value="cassettes"></option>
+                    </datalist>
+
+                    <label for="cassetteCount" class="form-label visually-hidden">Cassette Count</label>
+                    <input name="cassetteCount" value="4" class="form-control" list="cassetteCountOptions" id="cassetteCount">
+                    <datalist id="cassetteCountOptions">
+                        <option value="1"></option>
+                        <option value="2"></option>
+                        <option value="3"></option>
+                        <option value="4"></option>
+                    </datalist>
+
+                </div>
+
+            </div><!-- End of Cassette Count -->
+
+            <!-- Cassette 1 -->
+            <div class="my-3">
+                
+                <span class="d-block mb-1">Cassette 1</span>
+
+                <div class="input-group">
+
+                    <span class="input-group-text" id="cassette1NoteSymbol">£</span>
+                    <label for="cassette1Note" class="form-label visually-hidden">Cassette 1 Note Type</label>
+                    <input name="cassette1Note" value="5" class="form-control" list="cassette1NoteOptions" id="cassette1Note">
+                    <datalist id="cassette1NoteOptions">
+                        <option value="5"></option>
+                        <option value="10"></option>
+                        <option value="20"></option>
+                        <option value="50"></option>
+                    </datalist>
+    
+                    <span class="input-group-text" id="cassette1CashSymbol">£</span>
+                    <label for="cassette1Cash" class="form-label visually-hidden">Cassette 1 Cash Value</label>
+                    <input name="cassette1Cash" value=10000 class="form-control" list="cassette1CashOptions" id="cassette1Cash">
+                    <datalist id="cassette1CashOptions">
+                        <option value=10000></option>
+                        <option value=20000></option>
+                        <option value=30000></option>
+                        <option value=40000></option>
+                    </datalist>
+    
+                </div>
+
+            </div> <!-- End of Cassette 1 -->
+
+            <!-- Cassette 2 -->
+            <div class="my-3">
+
+                <span class="d-block mb-1">Cassette 2</span>
+
+                <div class="input-group">
+
+                    <span class="input-group-text" id="cassette2NoteSymbol">£</span>
+                    <label for="cassette2Note" class="form-label visually-hidden">Cassette 2 Note Type</label>
+                    <input name="cassette2Note" value="10" class="form-control" list="cassette2NoteOptions" id="cassette2Note">
+                    <datalist id="cassette1NoteOptions">
+                        <option value="5"></option>
+                        <option value="10"></option>
+                        <option value="20"></option>
+                        <option value="50"></option>
+                    </datalist>
+    
+                    <span class="input-group-text" id="cassette2CashSymbol">£</span>
+                    <label for="cassette2Cash" class="form-label visually-hidden">Cassette 2 Cash Value</label>
+                    <input name="cassette2Cash" value=20000 class="form-control" list="cassette2CashOptions" id="cassette2Cash">
+                    <datalist id="cassette2CashOptions">
+                        <option value=20000></option>
+                        <option value=40000></option>
+                        <option value=60000></option>
+                        <option value=80000></option>
+                    </datalist>
+    
+                </div>
+
+            </div> <!-- End of Cassette 2 -->
+
+            <!-- Cassette 3 -->
+            <div class="my-3">
+
+                <span class="d-block mb-1">Cassette 3</span>
+
+                <div class="input-group">
+
+                    <span class="input-group-text" id="cassette3NoteSymbol">£</span>
+                    <label for="cassette3Note" class="form-label visually-hidden">Cassette 3 Note Type</label>
+                    <input name="cassette3Note" value="20" class="form-control" list="cassette3NoteOptions" id="cassette3Note">
+                    <datalist id="cassette1NoteOptions">
+                        <option value="5"></option>
+                        <option value="10"></option>
+                        <option value="20"></option>
+                        <option value="50"></option>
+                    </datalist>
+
+                    <span class="input-group-text" id="cassette3CashSymbol">£</span>
+                    <label for="cassette3Cash" class="form-label visually-hidden">Cassette 3 Cash Value</label>
+                    <input name="cassette3Cash" value=40000 class="form-control" list="cassette3CashOptions" id="cassette3Cash">
+                    <datalist id="cassette3CashOptions">
+                        <option value=40000></option>
+                        <option value=80000></option>
+                        <option value=120000></option>
+                        <option value=160000></option>
+                    </datalist>
+
+                </div>
+
+            </div> <!-- End of Cassette 3 -->
+
+            <!-- Cassette 4 -->
+            <div class="my-3">
+
+                <span class="d-block mb-1">Cassette 4</span>
+
+                <div class="input-group">
+
+                    <span class="input-group-text" id="cassette4NoteSymbol">£</span>
+                    <label for="cassette4Note" class="form-label visually-hidden">Cassette 4 Note Type</label>
+                    <input name="cassette4Note" value="50" class="form-control" list="cassette4NoteOptions" id="cassette4Note">
+                    <datalist id="cassette1NoteOptions">
+                        <option value="5"></option>
+                        <option value="10"></option>
+                        <option value="20"></option>
+                        <option value="50"></option>
+                    </datalist>
+
+                    <span class="input-group-text" id="cassette4CashSymbol">£</span>
+                    <label for="cassette4Cash" class="form-label visually-hidden">Cassette 4 Cash Value</label>
+                    <input name="cassette2Cash" value=100000 class="form-control" list="cassette4CashOptions" id="cassette4Cash">
+                    <datalist id="cassette4CashOptions">
+                        <option value=100000></option>
+                        <option value=200000></option>
+                        <option value=300000></option>
+                        <option value=400000></option>
+                    </datalist>
+
+                </div>
+
+            </div> <!-- End of Cassette 4 -->
+
+            <button id="submitOrder" type="submit" class="d-block btn-lg btn-success mt-3 mx-auto">Validate</button>
+
+        </form> <!-- End of Registration Form-->
+
+        <!-- Button trigger modal -->
+        <button id="outputModalBtn" type="button" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#outputModal">
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="outputModal" tabindex="-1" aria-labelledby="outputModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 id="modalTitle" class="modal-title text-center mx-auto" id="exampleModalLabel">Error</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div id="modalBody" class="modal-body text-center">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger mx-auto" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main> <!-- End of Main -->
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/jquery/jquery-3.6.0.min.js"></script>
+
+    <!-- Main JS File -->
+    <script type="module" src="assets/js/validateOrder.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+
+</body>
+</html>

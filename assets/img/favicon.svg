@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13.3" height="16" viewBox="0 0 13.3 16">
+  <filter id='inset-shadow'>
+                              <!-- Shadow offset -->
+                              <feOffset
+                                      dx='0'
+                                      dy='0'
+                                    />
+                              <!-- Shadow blur -->
+                            <feGaussianBlur
+                                      stdDeviation='0.5'
+                                      result='offset-blur'
+                                    />
+                              <!-- Invert drop shadow to make an inset shadow-->
+                              <feComposite
+                                      operator='out'
+                                      in='SourceGraphic'
+                                      in2='offset-blur'
+                                      result='inverse'
+                                    />
+                              <!-- Cut colour inside shadow -->
+                              <feFlood
+                                      flood-color='#212529'
+                                      flood-opacity='.95'
+                                      result='color'
+                                    />
+                              <feComposite
+                                      operator='in'
+                                      in='color'
+                                      in2='inverse'
+                                      result='shadow'
+                                    />
+                              <!-- Placing shadow over element -->
+                              <feComposite
+                                      operator='over'
+                                      in='shadow'
+                                      in2='SourceGraphic'
+                                    /> 
+  </filter>
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgb(20,157,221);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgb(9,23,42);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <ellipse cx="6.67" cy="8" rx="6.67" ry="7" fill="url(#grad1)" stroke="#f8f9fa" stroke-width="0.5" />
+  <g filter="url(#inset-shadow)">
+    <line x1="6.7" y1="2.17" x2="6.67" y2="13.8" style="stroke:#f8f9fa;stroke-width:1.3"/>
+    <ellipse cx="6.7" cy="8" rx="4" ry="2.3" style="fill:none;stroke:#f8f9fa;stroke-width:1.3"/>
+  </g>
+</svg>
